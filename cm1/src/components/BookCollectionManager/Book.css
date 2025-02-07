@@ -1,15 +1,47 @@
-.book-item {
-  padding: 8px;
+.page-content .book-item {
+  padding: 20px;
   background-color: #fff;
-  margin: 5px 0;
+  margin: 10px 0;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
-.delete-button {
+.page-content .book-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.page-content .book-title {
+  font-size: 2.0em;
+  color: #2d3e50;
+  margin: 0;
+}
+
+.page-content .book-author {
+  margin-left: 40px;
+  font-size: 1.5em;
+  color: #34495e;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.page-content .publication-year {
+  margin-left: 20px;
+  font-size: 1.2em;
+  color: #34495e;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.page-content .delete-button {
   background-color: #e74c3c;
   border-radius: 4px;
   padding: 10px;
@@ -19,6 +51,6 @@
   margin: 0;
 }
 
-.delete-button:hover {
+.page-content .delete-button:hover {
   background-color: #c0392b;
 }
