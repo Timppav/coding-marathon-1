@@ -2,35 +2,20 @@ import React, { useState } from "react";
 
 function RecipeManager() {
   const [recipes, setRecipes] = useState([]);
-  const [name, setName] = useState("");
-  const [ingredients, setIngredients] = useState("");
-  const [instructions, setInstructions] = useState("");
+  const [newRecipe, setNewRecipe] = useState({ name: "", ingredients: "", instructions: "" });
 
-  // Handle input change for name
-  function handleNameChange(event) {
-    setName(event.target.value);
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setNewRecipe((prevRecipe) => ({ ...prevRecipe, [name]: value }));
   }
 
-  // Handle input change for ingredients
-  function handleIngredientsChange(event) {
-    setIngredients(event.target.value);
-  }
-
-  function handleInstructionsChange(event) {
-    setInstructions(event.target.value);
-  }
-
-  // Add a new recipe to the list
   function addRecipe() {
-    if (name.trim() !== "" && ingredients.trim() !== "" && instructions.trim() !== "") {
-      setRecipes((r) => [...r, { name, ingredients, instructions }]);
-      setName("");
-      setIngredients(""); // Clear the input fields
-      setInstructions("");
+    if (newRecipe.name.trim() !== "" && newRecipe.ingredients.trim() !== "" && newRecipe.instructions.trim() !== "") {
+      setRecipes((r) => [...r, newRecipe]);
+      setNewRecipe({ name: "", ingredients: "", instructions: ""});
     }
   }
 
-  // Delete a recipe from the list
   function deleteRecipe(index) {
     const updatedRecipes = recipes.filter((_, i) => i !== index);
     setRecipes(updatedRecipes);
@@ -43,20 +28,23 @@ function RecipeManager() {
         <input
           type="text"
           placeholder="Enter recipe name..."
-          value={name}
-          onChange={handleNameChange}
+          name="name"
+          value={newRecipe.name}
+          onChange={handleInputChange}
         />
         <input
           type="text"
           placeholder="Enter ingredients..."
-          value={ingredients}
-          onChange={handleIngredientsChange}
+          name="ingredients"
+          value={newRecipe.ingredients}
+          onChange={handleInputChange}
         />
         <input
           type="text"
           placeholder="Enter instructions..."
-          value={instructions}
-          onChange={handleInstructionsChange}
+          name="instructions"
+          value={newRecipe.instructions}
+          onChange={handleInputChange}
         />
         <button onClick={addRecipe}>Add Recipe</button>
       </div>
