@@ -39,13 +39,14 @@ function handleInputChange(event) {
 ## Phong
 I enhance additional function which update Shopping Card after user added items.
 
+```javascript
 const handleUpdateItem = (index) => {
   const updatedItem = [...items];
   updatedItem[index] = newItem;
   setItems(updatedItem);
   setNewItem(initialState);
 };
-```
+
 <div className="item-buttons">
   <button
     onClick={() => deleteItem(index)}
