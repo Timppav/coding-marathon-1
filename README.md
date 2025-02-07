@@ -71,12 +71,13 @@ Most problems came from CSS selectors in layout.css overwriting classes.
 Not ideal, but it works.
 
 ```css
-.page-content .recipe-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-  list-style: none;
+.page-content .book-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
   padding: 0;
+  background-color: transparent;
 }
 
 
