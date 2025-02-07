@@ -45,7 +45,7 @@ const handleUpdateItem = (index) => {
   setItems(updatedItem);
   setNewItem(initialState);
 };
-
+```
 <div className="item-buttons">
   <button
     onClick={() => deleteItem(index)}
