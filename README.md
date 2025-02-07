@@ -36,24 +36,6 @@ function handleInputChange(event) {
   setNewRecipe((prevRecipe) => ({ ...prevRecipe, [name]: value }));
 }
 ```
-
-## Casper
-
-Most problems came from CSS selectors in layout.css overwriting classes.
-
-`.page-content `prefix was added to all classes to avoid this.
-
-Not ideal, but it works.
-
-```css
-.page-content .recipe-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-}
-
 ## Phong
 I enhance additional function which update Shopping Card after user added items.
 
@@ -78,4 +60,24 @@ const handleUpdateItem = (index) => {
     Update
   </button>
 </div>
+
+```
+## Casper
+
+Most problems came from CSS selectors in layout.css overwriting classes.
+
+`.page-content `prefix was added to all classes to avoid this.
+
+Not ideal, but it works.
+
+```css
+.page-content .recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+
 ```
