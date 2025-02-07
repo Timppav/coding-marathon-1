@@ -1,60 +1,75 @@
-import React, { useState } from "react";
-import "./BookCollectionManager.css"
+import { useState } from "react";
+import Book from "./Book";
+import "./BookCollectionManager.css";
 
 function BookCollectionManager() {
   const [books, setBooks] = useState([]);
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
+  const [year, setYear] = useState("");
 
-  // Handle input change for title
   function handleTitleChange(event) {
     setTitle(event.target.value);
   }
 
-  // Handle input change for author
   function handleAuthorChange(event) {
     setAuthor(event.target.value);
   }
 
-  // Add a new book to the list
+  function handleYearChange(event) {
+    setYear(event.target.value);
+  }
+
   function addBook() {
     if (title.trim() !== "" && author.trim() !== "") {
-      setBooks((b) => [...b, { title, author }]);
+      setBooks((b) => [...b, { title, author, year }]);
       setTitle("");
-      setAuthor(""); // Clear the input fields
+      setAuthor("");
+      setYear("");
     }
   }
 
-  // Delete a book from the list
   function deleteBook(index) {
     const updatedBooks = books.filter((_, i) => i !== index);
     setBooks(updatedBooks);
   }
 
   return (
-    <div className="book-collection">
-      <h1>Book Collection Manager</h1>
-      <div>
+    <div className="collection-container">
+      <h1 className="collection-title">Book Collection Manager</h1>
+      <div className="book-form">
         <input
+          className="book-input"
           type="text"
           placeholder="Enter book title..."
           value={title}
           onChange={handleTitleChange}
         />
         <input
+          className="book-input"
           type="text"
           placeholder="Enter author name..."
           value={author}
           onChange={handleAuthorChange}
         />
-        <button onClick={addBook}>Add Book</button>
+        <input
+          className="book-input"
+          type="text"
+          placeholder="Year of Publication"
+          value={year}
+          onChange={handleYearChange}
+        />
+        <button className="submit-button" onClick={addBook}>
+          Add Book
+        </button>
       </div>
-      <ol>
+      <ol className="books-list">
         {books.map((book, index) => (
-          <li key={index}>
-            {book.title} by {book.author}
-            <button onClick={() => deleteBook(index)}>Delete</button>
-          </li>
+          <Book
+            key={index}
+            book={book}
+            onDelete={() => deleteBook(index)}
+          />
         ))}
       </ol>
     </div>
