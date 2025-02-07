@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./ContactListManager.css";
-
+ 
 function ContactListManager() {
   const [contacts, setContacts] = useState([]);
   const [name, setName] = useState("");
@@ -82,7 +82,7 @@ return (
 
 Here "Contact-collection" was different than the one in css file ("contact-collection") so the css didn't show up on the page.
 
-(fixed version)
+(fixed version) 
 
 return (
     <div className="contact-collection">
