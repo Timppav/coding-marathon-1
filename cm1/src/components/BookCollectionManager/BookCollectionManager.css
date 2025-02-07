@@ -1,63 +1,64 @@
-.book-collection {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .book-collection h1 {
-    text-align: center;
-    color: #2d3e50;
-  }
-  
-  .book-collection input {
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .book-collection button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .book-collection button:hover {
-    background-color: #45a049;
-  }
-  
-  .book-collection ol {
-    padding-left: 20px;
-  }
-  
-  .book-collection li {
-    padding: 8px;
-    background-color: #fff;
-    margin: 5px 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .book-collection li button {
-    background-color: #e74c3c;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .book-collection li button:hover {
-    background-color: #c0392b;
-  }
-  
+.collection-container {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collection-title {
+  text-align: center;
+  color: #2d3e50;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.book-input {
+  padding: 10px;
+  margin: 10px;
+  width: 450px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.book-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.submit-button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #4CAF50;
+  max-width: 150px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.books-list {
+  list-style-position: inside;
+  padding: 20px;
+  margin: 0;
+}
