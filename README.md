@@ -1,6 +1,6 @@
 # Self-Assessment
 
-### Tino
+## Tino
 
 First I used separate state variables for each input field like this:
 
