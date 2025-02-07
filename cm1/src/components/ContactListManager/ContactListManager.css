@@ -1,5 +1,5 @@
  
-.contact-collection {
+.contact-list-manager {
     font-family: Helvetica, sans-serif;
     max-width: 400px;
     margin: 40px auto;
@@ -10,13 +10,13 @@
     text-align: center;
 }
 
-.contact-collection h1 {
+.contact-list-manager h1 {
     font-weight: 600;
     color: #007bff;
     margin-bottom: 20px;
 }
 
-.contact-collection input {
+.contact-list-manager input {
     width: calc(100% - 22px);
     padding: 12px;
     margin: 8px 0;
@@ -27,11 +27,11 @@
     transition: border-color 0.3s;
 }
 
-.contact-collection input:focus {
+.contact-list-manager input:focus {
     border-color: #007bff;
 }
 
-.contact-collection button {
+.contact-list-manager button {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
@@ -44,22 +44,22 @@
     transition: background 0.3s, transform 0.1s;
 }
 
-.contact-collection button:hover {
+.contact-list-manager button:hover {
     background: #0056b3;
     transform: scale(1.05); 
 }
 
-.contact-collection button:active {
+.contact-list-manager button:active {
     transform: scale(0.98);
 }
 
-.contact-collection ol {
+.contact-list-manager ol {
     padding-left: 0;
     margin-top: 20px;
     list-style: none;
 }
 
-.contact-collection li {
+.contact-list-manager li {
     background: #f8f9fa;
     padding: 12px;
     margin: 6px 0;
@@ -71,7 +71,7 @@
     font-size: 16px;
 }
 
-.contact-collection li button {
+.contact-list-manager li button {
   background: #dc3545;
   padding: 10px 20px; 
   border-radius: 8px; 
@@ -83,7 +83,7 @@
   transition: background 0.3s, transform 0.2s;
 }
 
-.contact-collection li button:hover {
+.contact-list-manager li button:hover {
   background: #b52b37;
   transform: scale(1.05); 
 }

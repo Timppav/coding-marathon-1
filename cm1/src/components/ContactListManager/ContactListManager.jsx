@@ -34,7 +34,7 @@ function ContactListManager() {
   }
 
   return (
-    <div className="contact-collection">
+    <div className="contact-list-manager">
       <h1>Contact List Manager</h1>
       <div>
         <input
