@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./RecipeManager.css";
 
 function RecipeManager() {
   const [recipes, setRecipes] = useState([]);
@@ -51,7 +52,9 @@ function RecipeManager() {
       <ol>
         {recipes.map((recipe, index) => (
           <li key={index}>
-            {recipe.name}: {recipe.ingredients}: {recipe.instructions}
+            <h3>{recipe.name}</h3>
+            <p><i>{recipe.ingredients}</i></p>
+            <p>{recipe.instructions}</p>
             <button onClick={() => deleteRecipe(index)}>Delete</button>
           </li>
         ))}
